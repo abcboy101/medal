@@ -1,0 +1,24 @@
+{
+  "name": "medal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run mklink",
+    "mklink": "mklink /D .\\dist\\fonts %CD%\\public\\fonts && mklink /D .\\dist\\images %CD%\\public\\images && mklink /D .\\dist\\meta %CD%\\public\\meta && mklink .\\dist\\event-list.json %CD%\\public\\event-list.json",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run lint && npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "eslint": "^10.2.1",
+    "gh-pages": "^6.3.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.4"
+  }
+}

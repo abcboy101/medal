@@ -1,0 +1,134 @@
+main {
+  --main-padding: calc(100% * 5/90);
+  --top-gradient-height: 2.75em;
+
+  overflow-y: auto;
+  scrollbar-color: #E0F5EE transparent;
+  padding-left: var(--main-padding);
+  padding-right: calc(var(--main-padding) - var(--scrollbar-width, 0));
+  mask: linear-gradient(red 0 0) subtract, linear-gradient(red, transparent var(--top-gradient-height)) content-box;
+}
+
+.details-image {
+  margin: var(--top-gradient-height) auto 1.25em auto;
+  width: 85%;
+}
+
+.details-image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1.333333em;
+  background: linear-gradient(#DAF1E7 0%, #F8FAF5 3em, #F8FAF5 calc(100% - 3em), #DAF1E7 100%);
+  line-height: 1.88;
+  color: #03A1A2;
+  white-space: pre-wrap;
+  border-radius: 0.4em;
+  margin-bottom: var(--scroll-inset-bottom);
+}
+
+article .category {
+  margin: auto;
+  text-align: center;
+  font-size: 88%;
+  padding: 0.15em 1em;
+  min-width: 4.5em;
+  line-height: 1.22;
+}
+
+article h2 {
+  padding-top: 1.15em;
+  padding-bottom: 1.3em;
+  font-size: 110%;
+  text-align: center;
+  color: #00787E;
+  line-height: 1.22;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid #25696B;
+  padding-top: 1em;
+}
+
+section h3 {
+  grid-row: 1;
+  grid-column: 1;
+  background: #F8FAF5;
+  min-width: 11em;
+  text-align: center;
+}
+
+section::before {
+  content: '';
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1;
+  border-bottom: 1px solid #25696B;
+}
+
+.url {
+  text-align: center;
+  white-space: wrap;
+  word-break: break-all;
+  line-height: 1.88;
+  user-select: all;
+  padding-top: 0.666667em;
+  padding-bottom: 0.9em;
+}
+
+.go-to-url, .event-detail-medal {
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+.go-to-url {
+  color: #00787E;
+  border: 0.15em solid currentcolor;
+  border-radius: 1.25em;
+  height: 2.5em;
+  width: 66%;
+  margin-bottom: 1.875em;
+  font-size: 90%;
+}
+
+.event-detail-medal {
+  place-self: center;
+  background: #085966;
+  color: #E1F5EF;
+  border-radius: 1.375em;
+  height: 2.75em;
+  width: 90%;
+  margin-top: 2em;
+  margin-bottom: 0.2em;
+}
+
+#previous, #next {
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+:is(#previous, #next):disabled {
+  visibility: hidden;
+  cursor: default;
+}
+
+#previous {
+  place-self: start;
+}
+
+#next {
+  place-self: end;
+}

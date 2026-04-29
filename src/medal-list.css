@@ -1,0 +1,43 @@
+aside {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+aside h2 {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+  background: linear-gradient(#278287, #268186);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  padding: 0.4em 0;
+  min-height: 3.333333em;
+  line-height: 1.25;
+}
+
+.medal-list-container {
+  --aside-padding: 1em;
+
+  overflow-y: auto;
+  scrollbar-color: #E0F5EE transparent;
+  padding-left: var(--aside-padding);
+  padding-right: calc(var(--aside-padding) - var(--scrollbar-width, 0));
+  mask: linear-gradient(red 0 0) subtract, linear-gradient(red, transparent 0.4em) content-box;
+}
+
+.medal-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 0.4em;
+  padding: 0.9em 0 var(--scroll-inset-bottom);
+  gap: 1em;
+}
+
+.medal-list > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}

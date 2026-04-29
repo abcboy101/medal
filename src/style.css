@@ -1,0 +1,228 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:lang(ja) {
+  font-family: "FOT-RodinNTLG Pro", "Noto Sans JP", sans-serif;
+  font-size-adjust: 0.553;
+}
+
+:lang(en), :lang(fr), :lang(it), :lang(de), :lang(es) {
+  font-family: "FOT-UDKakugoC80 Pro", "Noto Sans", sans-serif;
+  font-size-adjust: 0.51;
+  font-stretch: 80%;
+}
+
+:lang(ko) {
+  font-family: "nintendo_udsg-r_ko_003", "Noto Sans KR", sans-serif;
+  font-size-adjust: 0.592773;
+}
+
+:lang(zh-Hans) {
+  font-family: "nintendo_udsg-r_ext_zh-cn_003", "nintendo_udsg-r_org_zh-cn_003", "Noto Sans SC", sans-serif;
+  font-size-adjust: 0.588867;
+}
+
+:lang(zh-Hant) {
+  font-family: "nintendo_udjxh-db_zh-tw_003", "Noto Sans TC", sans-serif;
+  font-size-adjust: 0.559;
+}
+
+@font-face {
+  font-family: "FOT-RodinNTLG Pro";
+  src:
+    local("RodinNTLGPro-DB"),
+    url("/fonts/FOT-RODINNTLGPRO-DB.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "FOT-UDKakugoC80 Pro";
+  font-stretch: 80%;
+  src:
+    local("UDKakugoC80Pro-DB"),
+    url("/fonts/FOT-UDKAKUGOC80PRO-DB.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "nintendo_udsg-r_ko_003";
+  src:
+    local("nintendo_udsg-r_ko_003"),
+    url("/fonts/nintendo_udsg-r_ko_003.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "nintendo_udsg-r_org_zh-cn_003";
+  src:
+    local("nintendo_udsg-r_org_zh-cn_003"),
+    url("/fonts/nintendo_udsg-r_org_zh-cn_003.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "nintendo_udsg-r_ext_zh-cn_003";
+  src:
+    local("nintendo_udsg-r_ext_zh-cn_003"),
+    url("/fonts/nintendo_udsg-r_ext_zh-cn_003.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "nintendo_udjxh-db_zh-tw_003";
+  src:
+    local("ARUDJingXiHeiB5-DB"),
+    url("/fonts/nintendo_udjxh-db_zh-tw_003.ttf") format("truetype");
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  display: inline;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global container */
+body {
+  --app-top: max(0vh, calc((100vh - 16/9 * 100vw) / 2) - 0.7em);
+  --app-bottom: calc(100vh - var(--app-top));
+
+  background: linear-gradient(#56A9AE var(--app-top), #01797F var(--app-bottom));
+  white-space: nowrap;
+  font-family: "font_efigs", sans-serif;
+  font-size: 3.333333vw;
+  text-spacing-trim: space-all;
+  /* letter-spacing: 0.025em; */
+  color: #E1F5EF;
+  line-height: 2;
+
+  --close-bottom: 0.75em;
+  --close-width: min(4.444444em, 15vw);
+  --scroll-inset-bottom: calc(var(--close-bottom) + var(--close-width) + 0.1em);
+}
+
+body, #app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@supports (width: 100dvw) {
+  body, #app {
+    width: 100dvw;
+    height: 100dvh;
+  }
+}
+
+#app {
+  margin: auto;
+}
+
+@media (max-aspect-ratio: 9/16) {
+  #app {
+    padding-top: var(--app-top);
+  }
+}
+
+@media (max-height: 540px) {
+  body {
+    --scale-factor: calc(100vh / 540px);
+    transform: scale(var(--scale-factor));
+    transform-origin: top center;
+    min-height: calc(100vh / var(--scale-factor));
+  }
+
+  #app {
+    min-height: calc(100vh / var(--scale-factor));
+  }
+}
+
+@media (min-width: 540px) {
+  body {
+    font-size: 18px;
+  }
+
+  #app {
+    max-width: 540px;
+  }
+}
+
+header {
+  display: flex;
+  margin: 1em 2em -0.5em;
+  justify-content: space-around;
+}
+
+header h1 {
+  display: flex;
+  flex: none;
+  place-content: center;
+  place-items: center;
+  margin: 0 auto;
+}
+
+header .icon {
+  margin: 0 0.25em;
+  top: 0.05em;
+  width: 1.25em;
+}
+
+.icon {
+  position: relative;
+  vertical-align: middle;
+  user-select: none;
+}
+
+footer {
+  display: flex;
+  flex: none;
+  place-content: center;
+  place-items: center;
+  background: #006875;
+  color: #F8FAF5;
+  margin: auto;
+  border-radius: 0.1em;
+  height: 2.75em;
+  width: 94.4444444%;
+}
+
+footer a {
+  color: inherit;
+}
+
+#close {
+  position: absolute;
+  left: 50%;
+  bottom: var(--close-bottom);
+  transform: translateX(-50%);
+  appearance: none;
+  font: inherit;
+  background: transparent;
+  border: none;
+  width: var(--close-width);
+  cursor: pointer;
+  clip-path: circle(41% at 50% 56%);
+  user-select: none;
+}
+
+#close img {
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  visibility: hidden;
+}
+
+[data-page="event-list"] :is(#previous, #next),
+[data-page="event-list"] + #close,
+[data-page="event-detail"] #sp_medal_event_list_title,
+:is([data-page="event-detail"], [data-page="event-detail-medal"]) :is(search, nav, footer),
+:is([data-page="event-list"], [data-page="event-detail-medal"]) :is(main, #sp_medal_event_detail_title),
+:is([data-page="event-list"], [data-page="event-detail"]) aside {
+  display: none;
+}

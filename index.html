@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/cnm_ft_medal_icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#56A9AE" />
+    <meta name="description" content="Archive of Pokémon HOME medal events" />
+    <title>Related Events</title>
+    <link rel="canonical" href="https://abcboy101.github.io/medal/">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=en" hreflang="en">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=ja" hreflang="ja">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=de" hreflang="de">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=fr" hreflang="fr">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=es" hreflang="es">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=it" hreflang="it">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=ko" hreflang="ko">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=zh-Hans" hreflang="zh-Hans">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/?lng=zh-Hant" hreflang="zh-Hant">
+    <link rel="alternate" href="https://abcboy101.github.io/medal/" hreflang="x-default">
+    <script type="module" src="/src/main.ts"></script>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="app" data-page="event-list">
+      <header>
+        <button id="previous">&larr;</button>
+        <h1>
+          <img class="icon" src="/images/cnm_ft_medal_icon.png" alt="" />
+          <span id="sp_medal_event_list_title">Related Events</span>
+          <span id="sp_medal_event_detail_title">Event Details</span>
+        </h1>
+        <button id="next">&rarr;</button>
+      </header>
+      <search class="inactive">
+        <form>
+          <div class="dropdown-header">
+            <h2>
+              <img class="icon" src="/images/cmn_filter_icon_on.png" alt="" />
+              <span id="sp_medal_search">Search</span>
+            </h2>
+            <div class="filter-count">
+              <span><span id="filter-current">0</span> / <span id="filter-total">0</span></span>
+            </div>
+            <div class="arrow">
+              <img src="/images/cmn_arrow_icon_03_d.png" alt="" />
+            </div>
+            <button type="reset">
+              <img class="icon" src="/images/cmn_icon_delete_03.png" alt="" />
+            </button>
+          </div>
+          <div class="dropdown">
+            <label for="search" id="sp_medal_event_filter_location">Event Location</label>
+            <div class="dropdown-value">
+              <select type="search" id="search" name="search"></select>
+              <button type="reset">
+                <img class="icon" src="/images/cmn_icon_delete_01.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </form>
+      </search>
+      <nav>
+        <div id="event-list" class="event-list">
+          <div class="event-list-empty" id="sp_medal_event_list_empty">There are no events to display.</div>
+        </div>
+      </nav>
+      <main>
+        <div class="details-image">
+          <img src="" alt="" />
+        </div>
+        <article>
+          <div class="category"></div>
+          <h2></h2>
+          <p></p>
+          <section>
+            <h3 id="sp_medal_event_detail_url">Link</h3>
+            <div class="url"></div>
+            <a class="go-to-url" id="sp_medal_go_to_URL" href="" target="_blank" rel="noopener noreferrer">Check</a>
+          </section>
+          <a class="event-detail-medal" id="sp_medal_event_detail_medal" href="#medals">Obtainable Medals</a>
+        </article>
+      </main>
+      <aside>
+        <h2></h2>
+        <div class="medal-list-container">
+          <div class="medal-list"></div>
+        </div>
+      </aside>
+      <footer lang="en">
+        <span>Archive of Pokémon HOME medal events | <a href="https://github.com/abcboy101/medal">GitHub</a></span>
+      </footer>
+    </div>
+    <button id="close">
+      <img src="/images/cmn_button_close.png" alt="" draggable="false" />
+    </button>
+  </body>
+</html>
