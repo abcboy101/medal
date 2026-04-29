@@ -10,7 +10,7 @@ search {
   z-index: 2;
 }
 
-search, search label, search select, search input, .event {
+search, search label, search select, .event {
   box-shadow: 0 0.25em 0.5em rgba(0 0 0 / 0.05);
 }
 
@@ -151,7 +151,7 @@ button[type="reset"] {
   width: 90%;
 }
 
-.dropdown label {
+search label {
   display: flex;
   background: #D9F4EB;
   color: #006875;
@@ -168,7 +168,7 @@ button[type="reset"] {
   grid-template-columns: 1fr auto;
 }
 
-.dropdown select {
+search select {
   padding: 0 0.5em;
   appearance: none;
   background: #F8FAF5;
@@ -182,10 +182,10 @@ button[type="reset"] {
   color-scheme: light;
 }
 
-.dropdown select option {
+search select option {
   appearance: none;
   font: inherit;
-  height: 2.25em;
+  height: 2.2em;
 }
 
 .dropdown button[type="reset"] {
