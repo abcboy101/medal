@@ -1,0 +1,28 @@
+{
+	"language": 1,
+	"title": "ポケモンセンターを訪れて\nメダルを手に入れよう！",
+	"category": "ポケモンセンター",
+	"image": "pokemoncenter_logo_IdFEKc6VsW.png",
+	"description": "ポケモンセンターに訪れた思い出として、特別な来店記念メダルを受け取ろう！\n\n■対象のポケモンセンター\n以下の店舗で来店記念メダルを受け取ることができます。\n・ポケモンセンターサッポロ\n・ポケモンセンタートウホク\n・ポケモンセンタートウキョーDX\n・ポケモンセンターメガトウキョー\n・ポケモンセンターシブヤ\n・ポケモンセンタースカイツリータウン\n・ポケモンセンタートウキョーベイ\n・ポケモンセンターヨコハマ\n・ポケモンセンターナゴヤ\n・ポケモンセンターカナザワ\n・ポケモンセンターキョウト\n・ポケモンセンターオーサカDX\n・ポケモンセンターオーサカ\n・ポケモンセンターヒロシマ\n・ポケモンセンターフクオカ\n・ポケモンセンターオキナワ\n\n■メダルの受け取り方\n1. 対象のポケモンセンターを訪れる\n2. 専用パネルを探す\n3. スマートフォン版『Pokémon HOME』の「メダル」→「読み取る」→「NFC読み取り」を選択\n4. 専用パネルにタッチでメダルを発行！\n\n■注意事項\n・来店記念メダルは1日1回のみ発行可能です\n・1回のメダル発行で、同じメダルを2枚受け取ることができます\n・発行制限は毎日午前9時（日本時間）にリセットされます\n・詳細は各店舗のスタッフにお尋ねください\n・やむを得ない事情により、予告なくサービスを中断する場合がございます\n・混雑緩和のため、店舗により入場を制限している場合がございます\n・『Pokémon HOME』メンテナンス期間中は、メダル機能もご利用いただけません\n・メンテナンス中で受け取れなかったメダルについてのお問い合わせは対応いたしかねますので、あらかじめご了承ください\n・お客様のスマートフォン端末の設定や状態により、メダルを正常に受け取ることができない場合がございますが、これらの理由による補填は対応いたしかねますので、あらかじめご了承ください",
+	"location": "日本",
+	"url": "https://www.pokemon.co.jp/shop/",
+	"timestamp": 1750920412,
+	"medals": [
+		"pokemoncenter_osaka_eMfnVaSPD5.png",
+		"pokemoncenter_osakadx_8lY6mCwMvr.png",
+		"pokemoncenter_shibuya_hlTeNEtpYY.png",
+		"pokemoncenter_kanazawa_RBtHlYenCS.png",
+		"pokemoncenter_hiroshima_kG2ATvKETc.png",
+		"pokemoncenter_okinawa_2qTDYfCH0V.png",
+		"pokemoncenter_skytreetown_PDeiPB48H4.png",
+		"pokemoncenter_nagoya_lXFhWKbOod.png",
+		"pokemoncenter_kyoto_c5xfRaqqik.png",
+		"pokemoncenter_tokyodx_A5KbBauXLc.png",
+		"pokemoncenter_tohoku_kEYFzsdyIg.png",
+		"pokemoncenter_sapporo_w2mu3HFCdQ.png",
+		"pokemoncenter_megatokyo_Q2gxZd7sbt.png",
+		"pokemoncenter_fukuoka_TJpg1ue7LC.png",
+		"pokemoncenter_tokyobay_JmIXvIH4ZK.png",
+		"pokemoncenter_yokohama_CTILljh2yB.png"
+	]
+}
