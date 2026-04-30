@@ -381,13 +381,13 @@
 	},
 	{
 		"id": "20250801_jp_3",
-		"version": 2,
+		"version": 4,
 		"language": 1,
 		"title": "日本全国ポケふた巡り【中部】",
 		"category": "ポケふた",
 		"image": "ポケふた_ロゴ.png",
 		"location": "日本/中部",
-		"timestamp": 1754006400
+		"timestamp": 1777507200
 	},
 	{
 		"id": "20250801_jp_2",
