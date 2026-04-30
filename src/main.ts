@@ -70,7 +70,6 @@ function getLang(lang: number): string {
 async function routeAsync() {
   const params = new URLSearchParams(location.search);
   try {
-    await loadEventList();
     if (params.has('id')) {
       await loadEventDetails(params.get('id')!, parseVersion(params.get('ver')));
       if (location.hash === '#medals')
@@ -282,16 +281,18 @@ async function loadEventDetails(id: string, ver: number) {
   if (loadedEventDetails === filename)
     return; // already loaded
 
+  const eventList = loadEventList();
   const res = await fetch(getCachedUrl(`meta/${filename}.json`));
   if (!res.ok)
     throw new Error(`HTTP ${res.status} (${res.statusText})`);
   const ev = await res.json() as MedalEventDetails;
   initEventDetails(ev);
   initMedalList(ev);
+  loadedEventDetails = filename;
 
+  await eventList;
   btnPrev.disabled = ver === 0;
   btnNext.disabled = ver === getMaxVer(id);
-  loadedEventDetails = filename;
 }
 
 /**
