@@ -26,6 +26,10 @@ function getMaxVer(id: string) {
   return 0;
 }
 
+function getCachedUrl(url: string) {
+  return (import.meta.env.DEV ? import.meta.env.BASE_URL : 'https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/') + url;
+}
+
 /**
  * Calculates the scrollbar width for the current view and sets the corresponding CSS variables.
  */
@@ -163,7 +167,7 @@ let initializedEventList = false;
 async function loadEventList() {
   if (loadedEventList.length > 0)
     return;
-  const res = await fetch('./event-list.json');
+  const res = await fetch('event-list.json', { cache: "no-cache" });
   const data = res.ok ? (await res.json() as MedalEvent[]) : [];
   data.sort((a, b) => b.timestamp - a.timestamp);
   loadedEventList = data;
@@ -183,7 +187,7 @@ async function initEventList() {
       const lang = getLang(ev.language);
       return (
       `<a class="event" href="?id=${ev.id}${ev.version === 0 ? '' : `&ver=${ev.version}`}">
-        <img src="${import.meta.env.BASE_URL}images/event/${ev.image}" alt="" loading="lazy" />
+        <img src="${getCachedUrl(`images/event/${ev.image}`)}" alt="" loading="lazy" />
         <div lang="${lang}"><span class="category">${ev.category}</span></div>
         <h2 lang="${lang}" class="title">${ev.title}</h2>
         <time datetime="${date.toISOString()}">${date.toLocaleDateString(document.documentElement.lang)}</time>
@@ -278,7 +282,7 @@ async function loadEventDetails(id: string, ver: number) {
   if (loadedEventDetails === filename)
     return; // already loaded
 
-  const res = await fetch(`./meta/${filename}.json`);
+  const res = await fetch(getCachedUrl(`meta/${filename}.json`));
   if (!res.ok)
     throw new Error(`HTTP ${res.status} (${res.statusText})`);
   const ev = await res.json() as MedalEventDetails;
@@ -299,7 +303,7 @@ function initEventDetails(ev: MedalEventDetails) {
   const detailTitle = eventDetail.getElementsByTagName('h2')[0] as HTMLElement;
   const detailDesc = eventDetail.getElementsByTagName('p')[0] as HTMLElement;
 
-  detailImg.src = `${import.meta.env.BASE_URL}images/event/${ev.image}`;
+  detailImg.src = getCachedUrl(`images/event/${ev.image}`);
   detailCat.lang = detailTitle.lang = detailDesc.lang = getLang(ev.language);
   detailCat.innerText = ev.category;
   detailTitle.innerText = ev.title;
@@ -329,7 +333,7 @@ function initMedalList(ev: MedalEventDetails) {
   medalHeader.lang = getLang(ev.language);
   medalHeader.innerText = ev.title;
   medalList.innerHTML = ev.medals.map((clc) =>
-    `<img src="${import.meta.env.BASE_URL}images/medal/${clc}" alt="" loading="lazy" />`
+    `<img src="${getCachedUrl(`images/medal/${clc}`)}" alt="" loading="lazy" />`
   ).join('');
 }
 //#endregion
