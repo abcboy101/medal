@@ -35,7 +35,7 @@
   font-family: "FOT-RodinNTLG Pro";
   src:
     local("RodinNTLGPro-DB"),
-    url("/fonts/FOT-RODINNTLGPRO-DB.otf") format("opentype");
+    url("https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/fonts/FOT-RODINNTLGPRO-DB.otf") format("opentype");
 }
 
 @font-face {
@@ -43,35 +43,35 @@
   font-stretch: 80%;
   src:
     local("UDKakugoC80Pro-DB"),
-    url("/fonts/FOT-UDKAKUGOC80PRO-DB.otf") format("opentype");
+    url("https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/fonts/FOT-UDKAKUGOC80PRO-DB.otf") format("opentype");
 }
 
 @font-face {
   font-family: "nintendo_udsg-r_ko_003";
   src:
     local("nintendo_udsg-r_ko_003"),
-    url("/fonts/nintendo_udsg-r_ko_003.ttf") format("truetype");
+    url("https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/fonts/nintendo_udsg-r_ko_003.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "nintendo_udsg-r_org_zh-cn_003";
   src:
     local("nintendo_udsg-r_org_zh-cn_003"),
-    url("/fonts/nintendo_udsg-r_org_zh-cn_003.ttf") format("truetype");
+    url("https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/fonts/nintendo_udsg-r_org_zh-cn_003.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "nintendo_udsg-r_ext_zh-cn_003";
   src:
     local("nintendo_udsg-r_ext_zh-cn_003"),
-    url("/fonts/nintendo_udsg-r_ext_zh-cn_003.ttf") format("truetype");
+    url("https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/fonts/nintendo_udsg-r_ext_zh-cn_003.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "nintendo_udjxh-db_zh-tw_003";
   src:
     local("ARUDJingXiHeiB5-DB"),
-    url("/fonts/nintendo_udjxh-db_zh-tw_003.ttf") format("truetype");
+    url("https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/fonts/nintendo_udjxh-db_zh-tw_003.ttf") format("truetype");
 }
 
 
