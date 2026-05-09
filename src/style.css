@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-size-adjust: 100%;
 }
 
 :lang(ja) {
@@ -88,11 +89,13 @@ a {
 body {
   --app-top: max(0vh, calc((100vh - 16/9 * 100vw) / 2) - 0.7em);
   --app-bottom: calc(100vh - var(--app-top));
+  --main-padding: min(calc(100% * 5/90), 1.66666667em);
+  --event-list-padding: 0.833333em;
 
   background: linear-gradient(#56A9AE var(--app-top), #01797F var(--app-bottom));
   white-space: nowrap;
   font-family: "font_efigs", sans-serif;
-  font-size: 3.333333vw;
+  font-size: min(18px, 3.333333vw);
   text-spacing-trim: space-all;
   /* letter-spacing: 0.025em; */
   color: #E1F5EF;
@@ -131,23 +134,31 @@ body, #app {
 @media (max-height: 540px) {
   body {
     --scale-factor: calc(100vh / 540px);
-    transform: scale(var(--scale-factor));
-    transform-origin: top center;
+    scale: var(--scale-factor);
+    transform-origin: top left;
     min-height: calc(100vh / var(--scale-factor));
   }
 
   #app {
     min-height: calc(100vh / var(--scale-factor));
+    min-width: calc(100vw / var(--scale-factor));
+  }
+
+  @supports (height: 100dvh) {
+    body {
+      min-height: calc(100dvh / var(--scale-factor));
+    }
+
+    #app {
+      min-height: calc(100dvh / var(--scale-factor));
+      min-width: calc(100dvw / var(--scale-factor));
+    }
   }
 }
 
 @media (min-width: 540px) {
   body {
     font-size: 18px;
-  }
-
-  #app {
-    max-width: 540px;
   }
 }
 
@@ -184,10 +195,9 @@ footer {
   place-items: center;
   background: #006875;
   color: #F8FAF5;
-  margin: auto;
+  margin: 0 var(--event-list-padding);
   border-radius: 0.1em;
   height: 2.75em;
-  width: 94.4444444%;
 }
 
 footer a {
@@ -196,9 +206,9 @@ footer a {
 
 #close {
   position: absolute;
-  left: 50%;
+  left: calc(50% / var(--scale-factor, 1));
   bottom: var(--close-bottom);
-  transform: translateX(-50%);
+  translate: -50%;
   appearance: none;
   font: inherit;
   background: transparent;

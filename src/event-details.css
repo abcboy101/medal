@@ -1,5 +1,4 @@
 main {
-  --main-padding: calc(100% * 5/90);
   --top-gradient-height: 2.75em;
 
   overflow-y: auto;
@@ -11,7 +10,7 @@ main {
 
 .details-image {
   margin: var(--top-gradient-height) auto 1.25em auto;
-  width: 85%;
+  width: 22.6666667em;
 }
 
 .details-image img {
@@ -24,6 +23,7 @@ main {
 article {
   display: flex;
   flex-direction: column;
+  margin: auto;
   padding: 2em 1.333333em;
   background: linear-gradient(#DAF1E7 0%, #F8FAF5 3em, #F8FAF5 calc(100% - 3em), #DAF1E7 100%);
   line-height: 1.88;
@@ -31,6 +31,7 @@ article {
   white-space: pre-wrap;
   border-radius: 0.4em;
   margin-bottom: var(--scroll-inset-bottom);
+  max-width: calc(1000px + 2.666667em);
 }
 
 article .category {
@@ -95,7 +96,7 @@ section::before {
   border: 0.15em solid currentcolor;
   border-radius: 1.25em;
   height: 2.5em;
-  width: 66%;
+  width: 17.6em;
   margin-bottom: 1.875em;
   font-size: 90%;
 }
@@ -106,7 +107,7 @@ section::before {
   color: #E1F5EF;
   border-radius: 1.375em;
   height: 2.75em;
-  width: 90%;
+  width: 21.6em;
   margin-top: 2em;
   margin-bottom: 0.2em;
 }

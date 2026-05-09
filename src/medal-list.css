@@ -29,7 +29,8 @@ aside h2 {
 
 .medal-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, 6.25em);
+  justify-content: center;
   margin-top: 0.4em;
   padding: 0.9em 0 var(--scroll-inset-bottom);
   gap: 1em;
