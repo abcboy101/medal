@@ -64,6 +64,19 @@ function getLang(lang: number): string {
 }
 
 //#region Routing
+function updateLinks(params: URLSearchParams) {
+  params.set('lng', document.documentElement.lang);
+  document.querySelector('link[rel="canonical"]')!.setAttribute('href', `${location.origin}${location.pathname}?${params.toString()}`);
+  for (const alt of document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"]')) {
+    if (alt.hreflang === 'x-default')
+      params.delete('lng');
+    else
+      params.set('lng', alt.hreflang);
+    const paramsStr = params.toString();
+    alt.setAttribute('href', `${location.origin}${location.pathname}${paramsStr ? `?${paramsStr}` : ''}`);
+  }
+}
+
 /**
  * Loads and displays the requested content in the current window.
  */
@@ -82,6 +95,7 @@ async function routeAsync() {
       app.setAttribute('data-page', 'event-list');
     }
     app.classList.remove('loading');
+    updateLinks(params);
     updateScrollbarWidth();
   }
   catch (e) {
