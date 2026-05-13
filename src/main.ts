@@ -26,8 +26,21 @@ function getMaxVer(id: string) {
   return 0;
 }
 
+const CACHE_HOST = import.meta.env.DEV ? import.meta.env.BASE_URL : 'https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/';
 function getCachedUrl(url: string) {
-  return (import.meta.env.DEV ? import.meta.env.BASE_URL : 'https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/') + url;
+  return CACHE_HOST + url;
+}
+
+async function fetchCached(url: string) {
+  try {
+    const res = await fetch(getCachedUrl(url));
+    if (res.ok)
+      return res;
+  }
+  catch (e) {
+    console.error(e);
+  }
+  return fetch(url);
 }
 
 /**
@@ -209,6 +222,10 @@ async function initEventList() {
     }).join('');
     for (const link of eventList.children)
       (link as HTMLElement).addEventListener('click', viewEventDetails);
+    for (const img of eventList.getElementsByTagName('img'))
+      img.addEventListener('error', () => {
+        img.src = img.src.replace(CACHE_HOST, import.meta.env.BASE_URL);
+      });
   }
 
   const locationLangs = new Map(loadedEventList.map((ev) => [ev.location, ev.language]));
@@ -296,7 +313,7 @@ async function loadEventDetails(id: string, ver: number) {
     return; // already loaded
 
   const eventList = loadEventList();
-  const res = await fetch(getCachedUrl(`meta/${filename}.json`));
+  const res = await fetchCached(`meta/${filename}.json`);
   if (!res.ok)
     throw new Error(`HTTP ${res.status} (${res.statusText})`);
   const ev = await res.json() as MedalEventDetails;
@@ -314,6 +331,12 @@ async function loadEventDetails(id: string, ver: number) {
  */
 function initEventDetails(ev: MedalEventDetails) {
   const detailImg: HTMLImageElement = eventDetail.getElementsByTagName('img')[0];
+  if (loadedEventDetails === null) {
+    detailImg.addEventListener('error', () => {
+      detailImg.src = detailImg.src.replace(CACHE_HOST, import.meta.env.BASE_URL);
+    });
+  }
+
   const detailCat = eventDetail.getElementsByClassName('category')[0] as HTMLElement;
   const detailTitle = eventDetail.getElementsByTagName('h2')[0] as HTMLElement;
   const detailDesc = eventDetail.getElementsByTagName('p')[0] as HTMLElement;
@@ -350,6 +373,11 @@ function initMedalList(ev: MedalEventDetails) {
   medalList.innerHTML = ev.medals.map((clc) =>
     `<img src="${getCachedUrl(`images/medal/${clc}`)}" alt="" loading="lazy" />`
   ).join('');
+
+  for (const img of medalList.getElementsByTagName('img'))
+    img.addEventListener('error', () => {
+      img.src = img.src.replace(CACHE_HOST, import.meta.env.BASE_URL);
+    });
 }
 //#endregion
 
