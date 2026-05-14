@@ -26,20 +26,20 @@ function getMaxVer(id: string) {
   return 0;
 }
 
-const CACHE_HOST = import.meta.env.DEV ? import.meta.env.BASE_URL : 'https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/';
+const CACHE_HOST = import.meta.env.BASE_URL; // import.meta.env.DEV ? import.meta.env.BASE_URL : 'https://cdn.jsdelivr.net/gh/abcboy101/medal@gh-pages/';
 function getCachedUrl(url: string) {
   return CACHE_HOST + url;
 }
 
 async function fetchCached(url: string) {
-  try {
-    const res = await fetch(getCachedUrl(url));
-    if (res.ok)
-      return res;
-  }
-  catch (e) {
-    console.error(e);
-  }
+  // try {
+  //   const res = await fetch(getCachedUrl(url));
+  //   if (res.ok)
+  //     return res;
+  // }
+  // catch (e) {
+  //   console.error(e);
+  // }
   return fetch(url);
 }
 
