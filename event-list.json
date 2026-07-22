@@ -1,5 +1,15 @@
 [
 	{
+		"id": "20260722_us",
+		"version": 0,
+		"language": 2,
+		"title": "San Diego 2026",
+		"category": "Other",
+		"image": "SanDiego_Comcon_2026.png",
+		"location": "San Diego, California, USA",
+		"timestamp": 1784703600
+	},
+	{
 		"id": "20260705_jp",
 		"version": 0,
 		"language": 1,
