@@ -1,5 +1,15 @@
 [
 	{
+		"id": "20260730_jp",
+		"version": 0,
+		"language": 1,
+		"title": "巡回展『ポケモンローカルActs物産展』で\nメダルを手に入れよう！",
+		"category": "その他",
+		"image": "bussanten_logo.png",
+		"location": "日本/鳥取県",
+		"timestamp": 1785373200
+	},
+	{
 		"id": "20260722_us",
 		"version": 0,
 		"language": 2,
@@ -471,13 +481,13 @@
 	},
 	{
 		"id": "20250801_jp_6",
-		"version": 8,
+		"version": 9,
 		"language": 1,
 		"title": "日本全国ポケふた巡り【九州・沖縄】",
 		"category": "ポケふた",
 		"image": "ポケふた_ロゴ.png",
 		"location": "日本/九州・沖縄",
-		"timestamp": 1784678400
+		"timestamp": 1785196800
 	},
 	{
 		"id": "20250801_jp_5",
