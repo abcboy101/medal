@@ -1,0 +1,13 @@
+{
+	"language": 2,
+	"title": "Get Medals at “PokéXciting!”",
+	"category": "Other",
+	"image": "HOME_RelatedEvents_PokéXciting.png",
+	"description": "You can get Commemoration Medals at “PokéXciting!”, which will be held at KLCC Park on Saturday, September 12 – Sunday, September 13, 2026.\n\n“PokéXciting!” is a special event celebrating the 30th anniversary of Pokémon. Offering an exciting experience for everyone—from active Trainers to those who once embarked on journeys past—this event will tour five Asian cities: Kuala Lumpur, Taipei, Singapore, Manila, and Bangkok.\nGet Commemoration Medals as a special memento of your visit to the event!\n\n■ Event Locations\nFor detailed information on locations and future event schedules, please check the official website.\n\n■ How to Receive Medals\n1. Visit the “PokéXciting!” venue.\n2. Find the designated panel at the venue.\n3. In the mobile device version of Pokémon HOME, select \"Medals\", tap \"Scan\", and then select \"NFC Scan\".\n4. Tap the designated panel with your smartphone to get your medals!\n\n■ Important Notes\n• Commemoration Medals can only be obtained once per day.\n• You can receive two copies of the same Medal per scan.\n• The daily limit resets every day at 8:00 a.m.\n• Please note that the service may be suspended without prior notice due to unavoidable circumstances.\n• The Medal feature will be unavailable during Pokémon HOME maintenance periods.\n• Please be aware that we cannot assist with inquiries or reissue Medals that could not be received during maintenance.\n• Depending on your smartphone's settings or status, you may not be able to receive Medals properly. Please note that we cannot offer replacements or compensation in such cases.",
+	"location": "Kuala Lumpur, Malaysia",
+	"url": "",
+	"timestamp": 1788573600,
+	"medals": [
+		"HOME_Medal_PokéXciting_KualaLumpur.png"
+	]
+}
