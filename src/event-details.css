@@ -31,7 +31,7 @@ article {
   white-space: pre-wrap;
   border-radius: 0.4em;
   margin-bottom: var(--scroll-inset-bottom);
-  max-width: calc(1000px + 2.666667em);
+  max-width: 480px;
 }
 
 article .category {
