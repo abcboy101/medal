@@ -214,8 +214,8 @@ search.active .arrow {
 /* Event list */
 nav {
   flex: 1;
-  margin-left: var(--event-list-padding);
-  margin-right: max(0px, calc(var(--event-list-padding) - var(--scrollbar-width, 0px)));
+  margin-left: calc(env(safe-area-inset-left, 0) + var(--event-list-padding));
+  margin-right: max(0px, calc(env(safe-area-inset-right, 0) + var(--event-list-padding) - var(--scrollbar-width, 0px)));
   padding: 0 0.516667em;
   overflow-y: auto;
   scrollbar-color: #E0F5EE transparent;
@@ -228,7 +228,7 @@ nav {
   margin: auto;
   gap: 1em;
   padding-top: 0.5em;
-  padding-bottom: calc(1em + env(safe-area-inset-bottom));
+  padding-bottom: calc(1em + env(safe-area-inset-bottom, 0));
 }
 
 .event-list-empty {
