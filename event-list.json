@@ -1,5 +1,25 @@
 [
 	{
+		"id": "20261021_th",
+		"version": 0,
+		"language": 2,
+		"title": "Attend the 2026-27 Thailand\nPremier Ball League and get a Medal!",
+		"category": "Other",
+		"image": "PBL2025-26_512x512.png",
+		"location": "Bangkok/Thailand",
+		"timestamp": 1792551600
+	},
+	{
+		"id": "20261021_kr",
+		"version": 0,
+		"language": 8,
+		"title": "포켓몬 카드 게임 2027 코리안리그 시즌1을\n방문하고 메달을 손에 넣자!",
+		"category": "기타",
+		"image": "HOME_RelatedEvents_KoreanLeague2027.png",
+		"location": "대한민국/서울",
+		"timestamp": 1792551600
+	},
+	{
 		"id": "20261015_jp",
 		"version": 0,
 		"language": 1,
