@@ -137,8 +137,8 @@ button[type="reset"] {
 }
 
 .dropdown-header button[type="reset"] .icon {
-  width: 1.9em;
-  height: 1.9em;
+  width: 1.95em;
+  height: 1.95em;
 }
 
 .dropdown {
@@ -194,8 +194,8 @@ search select option {
 }
 
 .dropdown button[type="reset"] .icon {
-  width: 1.9em;
-  height: 1.9em;
+  width: 2em;
+  height: 2em;
 }
 
 search.inactive :is(button[type="reset"], .filter-count) {
